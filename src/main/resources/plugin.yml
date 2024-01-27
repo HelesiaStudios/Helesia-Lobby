@@ -2,3 +2,8 @@ name: Helesia-Lobby
 version: '${project.version}'
 main: fr.helesia.lobby.Main
 authors: [ 6my_, Seyno ]
+commands:
+  aide:
+    aliases:
+      - help
+      - minecraft:help
