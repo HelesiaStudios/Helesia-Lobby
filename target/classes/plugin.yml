@@ -3,7 +3,4 @@ version: '1.0-SNAPSHOT'
 main: fr.helesia.lobby.Main
 authors: [ 6my_, Seyno ]
 commands:
-  aide:
-    aliases:
-      - help
-      - minecraft:help
+  spawn:
