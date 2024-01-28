@@ -22,7 +22,7 @@ public class PlayerListener implements Listener {
     @EventHandler
     public void chat(PlayerChatEvent e){
         e.setCancelled(true);
-        String rank = "Joueur";
+        String rank = "§cOwner";
         Bukkit.broadcastMessage(rank + " " + e.getPlayer().getName() + "§f: " + e.getMessage());
     }
 }
