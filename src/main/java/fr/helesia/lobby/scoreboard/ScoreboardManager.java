@@ -77,7 +77,7 @@ public class ScoreboardManager {
     }
  
     private String colorIpAt() {
-        String ip = "play.serveur.fr";
+        String ip = "mc.helesia.fr";
  
         if (cooldown > 0) {
             cooldown--;

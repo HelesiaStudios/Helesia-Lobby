@@ -38,13 +38,19 @@ public class PersonalScoreboard {
     public void reloadData(){}
  
     public void setLines(String ip){
-        objectiveSign.setDisplayName("§eServeur");
+        objectiveSign.setDisplayName("§e❖ §6§lHelesia §e❖");
  
         objectiveSign.setLine(0, "§1");
-        objectiveSign.setLine(1, "§6Joueurs: §a" + Bukkit.getOnlinePlayers().size() + "/20");
-        objectiveSign.setLine(2, "§6Pseudo: §b" + player.getName());
+        objectiveSign.setLine(1, "§8➵ §7Compte: §f" + player.getName());
+        objectiveSign.setLine(2, "§8➵ §7Rang: §cAdmin");
         objectiveSign.setLine(3, "§2");
-        objectiveSign.setLine(4, ip);
+        objectiveSign.setLine(4, "§8➵ §7Coins: §60 ⛃");
+        objectiveSign.setLine(5, "§8➵ §7Cristaux: §b0 ❦");
+        objectiveSign.setLine(6, "§3");
+        objectiveSign.setLine(7, "§8➵ §7Lobby: §a#1 §7(§e" + Bukkit.getOnlinePlayers().size() + "§7)");
+        objectiveSign.setLine(8, "§8➵ §7Connectés: §a" + Bukkit.getOnlinePlayers().size());
+        objectiveSign.setLine(9, "§4");
+        objectiveSign.setLine(10, ip);
  
         objectiveSign.updateLines();
     }
