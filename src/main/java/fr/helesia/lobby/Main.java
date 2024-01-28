@@ -1,5 +1,6 @@
 package fr.helesia.lobby;
 
+import fr.helesia.lobby.commands.Commands;
 import fr.helesia.lobby.listener.player.PlayerListener;
 import fr.helesia.lobby.scoreboard.ScoreboardManager;
 import org.bukkit.Bukkit;
@@ -18,6 +19,7 @@ public final class Main extends JavaPlugin {
     @Override
     public void onEnable() {
         instance = this;
+        getCommand("spawn").setExecutor(new Commands());
         Bukkit.getPluginManager().registerEvents(new PlayerListener(), this);
 
         scheduledExecutorService = Executors.newScheduledThreadPool(16);
