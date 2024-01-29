@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="AZClientAPI">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../../../Desktop/dev pikari/plugins/AZClientAPI.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
