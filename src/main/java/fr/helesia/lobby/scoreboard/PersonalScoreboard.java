@@ -42,7 +42,7 @@ public class PersonalScoreboard {
  
         objectiveSign.setLine(0, "§1");
         objectiveSign.setLine(1, "§8➵ §7Compte: §f" + player.getName());
-        objectiveSign.setLine(2, "§8➵ §7Rang: §cAdmin");
+        objectiveSign.setLine(2, "§8➵ §7Rang: §cOwner");
         objectiveSign.setLine(3, "§2");
         objectiveSign.setLine(4, "§8➵ §7Coins: §60 ⛃");
         objectiveSign.setLine(5, "§8➵ §7Cristaux: §b0 ❦");
