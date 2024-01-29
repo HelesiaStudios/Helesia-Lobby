@@ -28,10 +28,10 @@ public class PlayerListener implements Listener {
         ItemStack compass = new ItemBuilder(Material.COMPASS).setName("§8❖ §cNavigation §8❖").toItemStack();
         ItemStack goldingot = new ItemBuilder(Material.GOLD_NUGGET).setName("§8❖ §eBoutique §8❖").toItemStack();
         ItemStack enderchest = new ItemBuilder(Material.ENDER_CHEST).setName("§8❖ §dCosmétiques §8❖").toItemStack();
-        ItemStack repeater = new ItemBuilder(Material.REDSTONE_WIRE).setName("§8❖ §cParamètres §8❖").toItemStack();
+        ItemStack repeater = new ItemBuilder(Material.REDSTONE_COMPARATOR).setName("§8❖ §cParamètres §8❖").toItemStack();
 
         player.getInventory().setItem(0, compass);
-        player.getInventory().setItem(2, goldingot);
+        player.getInventory().setItem(1, goldingot);
         player.getInventory().setItem(7, enderchest);
         player.getInventory().setItem(8, repeater);
 
