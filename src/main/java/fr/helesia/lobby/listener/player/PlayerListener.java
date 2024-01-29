@@ -1,14 +1,17 @@
 package fr.helesia.lobby.listener.player;
 
 import fr.helesia.lobby.Main;
+import fr.helesia.lobby.utils.ItemBuilder;
 import fr.speccy.azclientapi.bukkit.packets.PacketConfFlag;
 import org.bukkit.Bukkit;
+import org.bukkit.Material;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerChatEvent;
 import org.bukkit.event.player.PlayerJoinEvent;
 import org.bukkit.event.player.PlayerQuitEvent;
+import org.bukkit.inventory.ItemStack;
 
 public class PlayerListener implements Listener {
 
@@ -21,11 +24,25 @@ public class PlayerListener implements Listener {
         PacketConfFlag.setFlag(player, "sort_tab_list_by_names", true);
     }
 
+    public void giveItem(Player player){
+        ItemStack compass = new ItemBuilder(Material.COMPASS).setName("§8❖ §cNavigation §8❖").toItemStack();
+        ItemStack goldingot = new ItemBuilder(Material.GOLD_NUGGET).setName("§8❖ §eBoutique §8❖").toItemStack();
+        ItemStack enderchest = new ItemBuilder(Material.ENDER_CHEST).setName("§8❖ §dCosmétiques §8❖").toItemStack();
+        ItemStack repeater = new ItemBuilder(Material.REDSTONE_WIRE).setName("§8❖ §cParamètres §8❖").toItemStack();
+
+        player.getInventory().setItem(0, compass);
+        player.getInventory().setItem(2, goldingot);
+        player.getInventory().setItem(7, enderchest);
+        player.getInventory().setItem(8, repeater);
+
+    }
+
     @EventHandler
     public void join(PlayerJoinEvent e){
         e.setJoinMessage(null);
         Player player = e.getPlayer();
         setupPLSPPacketAZLauncher(player);
+        giveItem(player);
         Main.getInstance().getScoreboardManager().onLogin(player);
     }
 
