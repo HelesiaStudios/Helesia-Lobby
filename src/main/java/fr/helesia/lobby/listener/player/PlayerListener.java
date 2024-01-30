@@ -25,11 +25,18 @@ public class PlayerListener implements Listener {
         PacketConfFlag.setFlag(player, "sort_tab_list_by_names", true);
     }
 
+    public void giveItem(Player player){
+        ItemStack compass = new ItemBuilder(Material.COMPASS).setName("§8❖ §cNavigateur §8❖").toItemStack();
+
+        player.getInventory().setItem(0, compass);
+    }
+
     @EventHandler
     public void join(PlayerJoinEvent e){
         e.setJoinMessage(null);
         Player player = e.getPlayer();
         setupPLSPPacketAZLauncher(player);
+        giveItem(player);
         TitleManager.sendActionBar(player, "§8❖ §eBienvenue §cOwner " + player.getName() + " §8❖");
         Main.getInstance().getScoreboardManager().onLogin(player);
     }
